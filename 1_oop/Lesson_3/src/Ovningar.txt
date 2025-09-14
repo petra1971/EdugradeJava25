@@ -1,0 +1,52 @@
+1. If-Else Uppgifter
+Uppgift 1.1:
+Skriv ett program som kontrollerar om ett tal är jämnt eller udda. Använd en if-else-sats för att skriva ut ett meddelande om talet är jämnt eller udda.
+
+Tips är att använda modulus operatorn % för att kontrollera om ett tal är jämnt eller udda.
+
+Lösningsförslag
+Uppgift 1.2:
+Skapa ett program som frågar användaren om deras ålder och avgör om de är en minderårig (under 18 år), en vuxen (18-64 år) eller en senior (65 år och äldre).
+
+Tips är att använda flera if-else-satser för att kontrollera olika åldersgrupper.
+
+Lösningsförslag
+Uppgift 1.3:
+Skriv ett program som jämför tre tal och bestämmer vilket som är störst.
+
+Lösningsförslag
+2. Switch-sats Uppgifter
+Uppgift 2.1:
+Skriv ett program som tar en månad (som ett heltal från 1 till 12) och skriver ut motsvarande månads namn. Använd en switch-sats.
+
+Lösningsförslag
+Uppgift 2.2:
+Skapa ett program som tar en poäng (0-5) och skriver ut motsvarande betyg (A-F) enligt följande skala:
+
+5: A
+4: B
+3: C
+2: D
+1: E
+0: F
+Förväntad output för poängen 5 är "Betyg: A".
+
+Lösningsförslag
+Uppgift 2.3:
+Skriv ett program som tar en vardagsmåltid som inmatning (t.ex. "frukost", "lunch", "middag") och skriver ut en rekommenderad måltid. Använd en switch-sats.
+
+Lösningsförslag
+3. Avancerade Uppgifter för Snabbare Studenter
+Uppgift 3.1:
+Skriv ett program som simulerar en enkel miniräknare. Användaren matar in två tal och väljer en operation (addition, subtraktion, multiplikation, division). Använd en switch-sats för att utföra den valda operationen och skriv ut resultatet.
+
+Lösningsförslag
+Uppgift 3.2:
+Skapa ett program som beräknar en rabatt på en produkt baserat på användarens medlemsstatus (t.ex. "guld", "silver", " brons"). Använd en switch-sats för att tillämpa rätt rabatt.
+
+Exempel nivåer av rabatt:
+
+Guld: 20%
+Silver: 10%
+Brons: 5%
+Lösningsförslag
