@@ -13,8 +13,7 @@ public abstract class Monster extends Character {
     }
 
     @Override
-    public int attack(int power) {
-        int damage;
-        return damage = power;
+    void status() {
+        System.out.println("Name is " + name + " and health is " + health + "/" + maxHealth);
     }
 }
