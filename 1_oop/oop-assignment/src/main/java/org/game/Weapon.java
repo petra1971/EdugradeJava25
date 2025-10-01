@@ -15,6 +15,6 @@ public class Weapon {
     }
 
     public void printInfo() {
-        System.out.println("Strength name: " + name + "and cause damage: " + damage);
+        System.out.println("Weapon " + name + " cause " + damage + " damage");
     }
 }
