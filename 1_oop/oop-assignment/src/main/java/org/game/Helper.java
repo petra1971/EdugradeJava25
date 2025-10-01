@@ -1,4 +1,4 @@
-package org.utils;
+package org.game;
 
 public class Helper {
 

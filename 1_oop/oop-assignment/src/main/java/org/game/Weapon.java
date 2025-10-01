@@ -1,4 +1,4 @@
-package org.characters;
+package org.game;
 
 public class Weapon {
 
