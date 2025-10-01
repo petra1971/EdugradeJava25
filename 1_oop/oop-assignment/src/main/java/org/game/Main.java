@@ -11,6 +11,7 @@ public class Main {
                 "for blood and not carrots");
 
         Weapon weapon = new Weapon("Teeth", 10);
+        Eagle eagle = new Eagle("Grey eagle", 10, 2, 15);
         weapon.printInfo();
     }
 }
