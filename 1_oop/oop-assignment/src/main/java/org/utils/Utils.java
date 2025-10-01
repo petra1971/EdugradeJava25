@@ -1,4 +1,4 @@
-package org.main;
+package org.utils;
 
 public class Utils {
 
