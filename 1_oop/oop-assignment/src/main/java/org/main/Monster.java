@@ -1,18 +1,14 @@
 package org.main;
 
-public class Monster extends Character {
+public abstract class Monster extends Character {
     protected int power;
     protected int xpReward;
+    protected int goldReward;
 
-    public Monster(String name, int xpReward, int power) {
+    public Monster(String name, int xpReward, int goldReward, int power) {
         super(name);
         this.xpReward = xpReward;
+        this.goldReward = goldReward;
         this.power = power;
-    }
-
-    //Attack means a force value is set with random value. If strength
-    @Override
-    void attack(int power) {
-        //In a fight, Monster power is compared with Hero/Rabbit power (from its' strength) and highest wins and the looser get damaged (value comes from winner)
     }
 }
