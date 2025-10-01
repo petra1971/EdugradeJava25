@@ -12,7 +12,7 @@ public abstract class Character {
 
     abstract boolean isAlive(int health);
     abstract void takeDamage(int damage);
-    abstract void attack(int strength);
+    abstract void attack(int power);
 
     void status() {
         //TODO
