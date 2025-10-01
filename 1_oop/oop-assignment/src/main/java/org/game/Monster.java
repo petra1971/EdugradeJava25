@@ -11,4 +11,10 @@ public abstract class Monster extends Character {
         this.goldReward = goldReward;
         this.power = power;
     }
+
+    @Override
+    public int attack(int power) {
+        int damage;
+        return damage = power;
+    }
 }

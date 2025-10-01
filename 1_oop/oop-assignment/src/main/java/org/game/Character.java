@@ -8,8 +8,8 @@ public abstract class Character {
     public Character(String name) {
         this.name = name;
     }
-
-    abstract void attack(int power);
+    //Attack cause damage. Most damage wins.
+    abstract int attack(int power);
 
     boolean isAlive(int health) {
         return (health > 0);

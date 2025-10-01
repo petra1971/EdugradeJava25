@@ -3,18 +3,18 @@ package org.game;
 public class Weapon {
 
     private String name;
-    private int power;
+    private int damage;
 
     public Weapon(String name, int power) {
         this.name = name;
-        this.power = power;
+        this.damage = power;
     }
 
-    public int getPower() {
-        return power;
+    public int getDamage() {
+        return damage;
     }
 
     public void printInfo() {
-        System.out.println("Strength name: " + name + "and Injury: " + power);
+        System.out.println("Strength name: " + name + "and cause damage: " + damage);
     }
 }
