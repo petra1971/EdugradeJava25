@@ -1,6 +1,6 @@
 package org.utils;
 
-public class Utils {
+public class Helper {
 
     public int randomInt(int probability) {
         return (int) Math.round(Math.random() * probability);

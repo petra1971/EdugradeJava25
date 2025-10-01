@@ -1,4 +1,4 @@
-package org.abstractClasses;
+package org.characters;
 
 public abstract class Character {
     protected String name;

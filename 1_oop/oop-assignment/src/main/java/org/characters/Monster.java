@@ -1,4 +1,4 @@
-package org.abstractClasses;
+package org.characters;
 
 public abstract class Monster extends Character {
     protected int power;
