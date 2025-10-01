@@ -10,6 +10,7 @@ public abstract class Character {
     }
     //Attack cause damage. Most damage wins.
     abstract int attack(int power);
+    abstract void status();
 
     boolean isAlive(int health) {
         return (health > 0);
@@ -17,9 +18,6 @@ public abstract class Character {
     void takeDamage(int damage) {
         health -= damage;
     }
-    void status() {
-        //TODO
-        System.out.println();
-    }
+
 
 }
