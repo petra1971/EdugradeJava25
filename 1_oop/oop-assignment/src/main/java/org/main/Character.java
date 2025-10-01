@@ -2,22 +2,24 @@ package org.main;
 
 public abstract class Character {
     protected String name;
-    protected int maxHealth;
+    protected final int maxHealth = 100 ;
     protected int health;
 
-    public Character(String name, int maxHealth) {
+    public Character(String name) {
         this.name = name;
-        this.maxHealth = maxHealth;
     }
 
-    abstract boolean isAlive(int health);
-    abstract void takeDamage(int damage);
     abstract void attack(int power);
 
+    boolean isAlive(int health) {
+        return (health > 0);
+    }
+    void takeDamage(int damage) {
+        health -= damage;
+    }
     void status() {
         //TODO
         System.out.println();
     }
-
 
 }
