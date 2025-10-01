@@ -10,6 +10,10 @@ public class Weapon {
         this.power = power;
     }
 
+    public int getPower() {
+        return power;
+    }
+
     public void printInfo() {
         System.out.println("Strength name: " + name + "and Injury: " + power);
     }
