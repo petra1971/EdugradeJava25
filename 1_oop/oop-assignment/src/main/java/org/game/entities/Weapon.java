@@ -1,4 +1,4 @@
-package org.game;
+package org.game.entities;
 
 public class Weapon {
 
@@ -12,6 +12,9 @@ public class Weapon {
 
     public int getDamage() {
         return damage;
+    }
+    public String getName(){
+        return name;
     }
 
     public void printInfo() {
