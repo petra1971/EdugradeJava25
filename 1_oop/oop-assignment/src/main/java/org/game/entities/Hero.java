@@ -41,21 +41,22 @@ public class Hero extends Character {
     public void gainXp(int moreXp) {
         xp += moreXp;
         //Enough xp to level up?
-
+        if (xp >= 100)
+            levelUp();
     }
     //Level up
-    public void levelUp(int xp) {
-        if (xp >= 100) {
+    public void levelUp() {
+        {
             level = level + 1;
             xp -= 100;
+            maxHealth += 20;
+            heal();
         }
-        System.out.println("Rest xp: " + xp);
-        resetHealth();
         System.out.println("Congratulations! Your leveled up to level " + level +" and max HP increased to " + maxHealth);
     }
 
     //Reset health e.g. when a fight is won
-    public void resetHealth() {
+    public void heal() {
         health = maxHealth;
     }
 
