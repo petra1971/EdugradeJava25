@@ -1,18 +1,12 @@
 package org.game.utils;
-
 import java.util.Scanner;
 
 public class InputReader {
-    private static Scanner scanner;
-
-    //Constructor
-    public InputReader() {
-        this.scanner = new Scanner(System.in);
-    }
+    private static final Scanner scanner = new Scanner(System.in);
 
     //Method to read int with error handling
     public static int intReader(String prompt) {
-        System.out.print(prompt + " : ");
+//        System.out.print(prompt + " : ");
 
         // Loops until user write a valid integer
         while (!scanner.hasNextInt()) {

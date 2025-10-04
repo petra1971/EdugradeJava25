@@ -2,14 +2,14 @@ package org.game.entities;
 
 import org.game.utils.Helper;
 
-public abstract class Enemy extends org.game.entities.Character {
+public abstract class Enemy extends Character {
     protected int xpReward;
     protected int carrotReward;
 
-    public Enemy(String name, int xpReward, int goldReward) {
+    public Enemy(String name, int xpReward, int carrotReward) {
         super(name);
         this.xpReward = xpReward;
-        this.carrotReward = goldReward;
+        this.carrotReward = carrotReward;
     }
     //Abstract methods
     public abstract int attack();
@@ -26,6 +26,7 @@ public abstract class Enemy extends org.game.entities.Character {
     @Override
     public void status() {
         System.out.println(name + " HP: " + health + "/" + maxHealth);
+        System.out.println();
     }
 
     //Getters

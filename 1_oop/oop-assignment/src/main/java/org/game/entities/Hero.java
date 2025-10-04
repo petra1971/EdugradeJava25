@@ -54,7 +54,7 @@ public class Hero extends Character {
         health = maxHealth;
     }
 
-    //Gain carrots when fight is won or gold found in secure place
+    //Gain carrots when fight is won or carrots found in secure place
     public void gainCarrots(int moreCarrots) {
         carrots += moreCarrots;
         //TODO: Add actions for carrot such as write how many carrot hero has
@@ -68,6 +68,8 @@ public class Hero extends Character {
 
     @Override
     public void status() {
-        System.out.println(name + " status: Level = " + level + " HP = " + health + "/" + maxHealth + ", XP: " + xp + "/" + maxXp);
+        System.out.println(name + " status: Level = " + level + " HP = " + health + "/" + maxHealth + ", XP: " + xp
+                + "/" + maxXp + " carrots: " + carrots);
+//        System.out.println();
     }
 }

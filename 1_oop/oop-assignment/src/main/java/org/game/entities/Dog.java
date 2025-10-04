@@ -4,14 +4,14 @@ import org.game.utils.Helper;
 
 public class Dog extends Enemy {
 
-    public Dog(String name, int xpReward, int goldReward) {
-        super(name, xpReward, goldReward);
+    public Dog(String name, int xpReward, int carrotReward) {
+        super(name, xpReward, carrotReward);
     }
 
     //Concrete methods
     @Override
     public int attack() {
-        int damage = Helper.randomInt(20);
+        int damage = Helper.randomInt(30);
         System.out.println(this.getName() + " attacks with damage " + damage);
         return damage;
     }
