@@ -26,12 +26,6 @@ public class Hero extends Character {
         status();
     }
 
-    @Override
-    public void status() {
-//        System.out.println(name + " status: " + damage + " damage, " + health +  "/" + maxHealth);
-        System.out.println(name + " status: Level = " + level + " HP = " + health + "/" + maxHealth + ", XP: " + xp + "/" + maxXp);
-    }
-
     //Get a new weapon
     public void gainWeapon(Weapon newWeapon) {
         damage += newWeapon.getDamage();
@@ -68,10 +62,12 @@ public class Hero extends Character {
     }
 
     //Getters
-    public int getXp() {
-        return xp;
-    }
     public int getLevel() {
         return level;
+    }
+
+    @Override
+    public void status() {
+        System.out.println(name + " status: Level = " + level + " HP = " + health + "/" + maxHealth + ", XP: " + xp + "/" + maxXp);
     }
 }
