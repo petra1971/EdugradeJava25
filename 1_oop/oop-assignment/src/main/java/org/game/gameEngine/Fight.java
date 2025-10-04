@@ -15,8 +15,10 @@ public class Fight {
         int round = 1;
         int maxRounds = 10;
 
-        System.out.print("Fight begins. ");
+        System.out.println("Fight begins! ");
+        hero.status();
         System.out.println();
+        Helper.sleepForMilliseconds(4000);
 
         while (hero.isAlive() && enemy.isAlive()) {
             System.out.println("Round " + round);
@@ -35,10 +37,11 @@ public class Fight {
                 System.out.println();
             }
             round++;
-//            if (round >= maxRounds)
-//                break;
-//            else
-                Helper.sleepForMilliseconds(4000);
+            Helper.sleepForMilliseconds(3000);
+            if (round >= maxRounds) {
+                System.out.println("Fight is over, both got exhausted and no one won this time");
+                break;
+            }
         }
         //Who won?
         if (hero.isAlive()) {
@@ -47,7 +50,8 @@ public class Fight {
             hero.gainCarrots(enemy.getCarrotReward());
 //            hero.levelUp(enemy.getHealthReward());
             System.out.println("Congratulations! You won the fight! " + hero.getName() +" gained " + enemy.getXpReward()
-                    + " XP and " + enemy.getCarrotReward() + " carrots. \n Level is now " + hero.getLevel());
+                    + " XP and " + enemy.getCarrotReward() + " carrots.");
+            hero.status();
 
         } else {
             System.out.println("Fight is over! " + hero.getName() + " died.");
