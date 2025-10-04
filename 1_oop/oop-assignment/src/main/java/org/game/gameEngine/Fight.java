@@ -22,6 +22,7 @@ public class Fight {
 
         while (hero.isAlive() && enemy.isAlive()) {
             System.out.println("Round " + round);
+
             //Hero attacks
             int heroDamage = hero.attack();
             //Enemy take damage
@@ -43,6 +44,7 @@ public class Fight {
         }
         //Who won?
         if (hero.isAlive()) {
+            //Hero is alive
             hero.gainXp(enemy.getXpReward());
             hero.gainCarrots(enemy.getCarrotReward());
 //            hero.levelUp(enemy.getHealthReward());
