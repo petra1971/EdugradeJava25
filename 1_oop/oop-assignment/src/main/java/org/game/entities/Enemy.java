@@ -1,27 +1,38 @@
 package org.game.entities;
 
-public abstract class Enemy extends org.game.entities.Character {
-    protected int power;
-    protected int xpReward;
-    protected int goldReward;
+import org.game.utils.Helper;
 
-    public Enemy(String name, int xpReward, int goldReward, int power) {
+public abstract class Enemy extends org.game.entities.Character {
+    protected int xpReward;
+    protected int carrotReward;
+
+    public Enemy(String name, int xpReward, int goldReward) {
         super(name);
         this.xpReward = xpReward;
-        this.goldReward = goldReward;
-        this.power = power;
+        this.carrotReward = goldReward;
     }
-
-    //Abstract method
-    abstract void status();
+    //Abstract methods
+    public abstract int attack();
 
     //Concrete methods
+    @Override
+    public void takeDamage(int damage) {
+        health -= damage;
+        if (health < 0)
+            health = 0;
+        status();
+    }
+
+    @Override
+    public void status() {
+        System.out.println(name + " HP: " + health + "/" + maxHealth);
+    }
+
+    //Getters
     public int getXpReward() {
         return xpReward;
     }
-    public int getGoldReward() {
-        return goldReward;
+    public int getCarrotReward() {
+        return carrotReward;
     }
-
-
 }

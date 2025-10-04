@@ -1,27 +1,76 @@
 package org.game.entities;
 
-public class Hero extends org.game.entities.Character {
-    private int basicDamage = 10;
-    private Weapon weapon = new Weapon("Teeth", 5);
+public class Hero extends Character {
+    private int damage = 15;
     private int xp = 0;
+    private int maxXp = 100;
     private int level = 1;
+    private int carrots = 0;
+    private Weapon weapon;
 
     public Hero(String name) {
         super(name);
     }
 
-    public void gainWeapon(Weapon newWeapon) {
-        weapon = newWeapon;
+    @Override
+    public int attack() {
+        System.out.println(name + " attacks with damage " + damage);
+        return damage;
     }
 
     @Override
-    public int attack() {
-        int totalDamage = basicDamage + weapon.getDamage();
-        System.out.println("Hero attacks with " + weapon.getName() + " and total power of " + totalDamage);
-        return totalDamage;
+    public void takeDamage(int damage) {
+        health -= damage;
+        if (health < 0)
+            health = 0;
+        status();
     }
 
+    @Override
     public void status() {
-        System.out.println("Name is " + name + ", basic damage " + basicDamage + ", weapon " + weapon + ", health " + health + "/" + maxHealth);
+//        System.out.println(name + " status: " + damage + " damage, " + health +  "/" + maxHealth);
+        System.out.println(name + " status: Level = " + level + " HP = " + health + "/" + maxHealth + ", XP: " + xp + "/" + maxXp);
+    }
+
+    //Get a new weapon
+    public void gainWeapon(Weapon newWeapon) {
+        damage += newWeapon.getDamage();
+    }
+
+    //Get more XP when e.g. fight is won
+    public void gainXp(int moreXp) {
+        xp += moreXp;
+        //Enough xp to level up?
+
+    }
+    //Level up
+    public void levelUp(int xp) {
+        if (xp >= 100) {
+            level = level + 1;
+            xp -= 100;
+        }
+        System.out.println("Rest xp: " + xp);
+        resetHealth();
+        System.out.println("Congratulations! Your leveled up to level " + level +" and max HP increased to " + maxHealth);
+    }
+
+    //Reset health e.g. when a fight is won
+    public void resetHealth() {
+        health = maxHealth;
+    }
+
+    //Gain carrots when fight is won or gold found in secure place
+    public void gainCarrots(int moreCarrots) {
+        carrots += moreCarrots;
+        //TODO: Add actions for carrot such as write how many carrot hero has
+        // and how many are left until it's time for shopping or if it's enough for shopping already
+    }
+
+    //Getters
+    public int getXp() {
+        return xp;
+    }
+    public int getLevel() {
+        return level;
     }
 }

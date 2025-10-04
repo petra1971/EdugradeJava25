@@ -3,18 +3,18 @@ package org.game.utils;
 import java.util.Scanner;
 
 public class InputReader {
-    private Scanner scanner;
+    private static Scanner scanner;
 
-    //Konstruktor
+    //Constructor
     public InputReader() {
         this.scanner = new Scanner(System.in);
     }
 
-    //Metod för att läsa int med felhantering
-    public int intReader(String prompt) {
+    //Method to read int with error handling
+    public static int intReader(String prompt) {
         System.out.print(prompt + " : ");
 
-        // Loopar tills användaren skriver in ett giltigt heltal
+        // Loops until user write a valid integer
         while (!scanner.hasNextInt()) {
             System.out.println("Invalid input");
             System.out.print(prompt + " : ");
@@ -24,23 +24,37 @@ public class InputReader {
         return value;
     }
 
-    //Metod för att läsa in hel rad inkl mellanslag
-    // Använder nextLine() som läser in fram till nästa radbryt (Enter)
-    public String readString(String prompt) {
+    //Method to read a line inkluding empty char
+    //Uses nextLine() that reads until next line break (Enter)
+    public static String readString(String prompt) {
         System.out.print(prompt + " : ");
         return scanner.nextLine();
     }
 
-    //Metod för att läsa in ett ord exkl mellansla
-    public String readWord(String prompt) {
+    //Method to read a word including empty character
+    public static String readWord(String prompt) {
         System.out.print(prompt + " : ");
         String word = scanner.next();
         scanner.nextLine();  // Rensa bort radbrytning som blir kvar i bufferten
         return word;
     }
 
+    //Method to read a char incl error handling
+    public static char readChar(String prompt) {
+        char character;
+        System.out.println(prompt + " : ");
+        String input = scanner.next();
+
+        while (input.isEmpty() || !(input.equalsIgnoreCase("Y") || input.equalsIgnoreCase("N"))) {
+            System.out.println(prompt + " : ");
+            input = scanner.next();
+        }
+        character = input.charAt(0); //Get first character
+        return character;
+    }
+
     //Stänga scannerklassen för att frigöra minne
-    public void close() {
+    public static void close() {
         scanner.close();
     }
 }

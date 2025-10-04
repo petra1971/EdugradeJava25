@@ -1,24 +1,24 @@
 package org.game.entities;
 
     public abstract class Character {
-
     protected String name;
-    protected final int maxHealth = 100 ;
+    protected int maxHealth = 100 ;
     protected int health;
+    protected int damage;
 
     public Character(String name) {
         this.name = name;
+        this.health = maxHealth;
     }
 
     //Abstract methods
     abstract int attack();    //Attack cause damage -> lower health for the attacked
+    abstract void takeDamage(int damage);
+    abstract void status();
 
     //Concrete methods
-    public boolean isAlive(int health) {
+    public boolean isAlive() {
         return (health > 0);
-    }
-    public void takeDamage(int damage) {
-        health -= damage;
     }
 
     //Getters and setters
@@ -30,5 +30,8 @@ package org.game.entities;
     }
     public int getHealth() {
         return health;
+    }
+    public int getDamage() {
+        return damage;
     }
 }
