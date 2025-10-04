@@ -1,18 +1,16 @@
 package org.game.gameEngine;
 import org.game.entities.Enemy;
 import org.game.entities.Hero;
-import org.game.entities.Place;
+import org.game.entities.SafePlace;
 import org.game.utils.Helper;
 
 public class Fight {
     private Hero hero;
     private Enemy enemy;
-    private Place place;
 
-    public Fight (Hero hero, Enemy enemy, Place place) {
+    public Fight (Hero hero, Enemy enemy) {
         this.hero = hero;
         this.enemy = enemy;
-        this.place = place;
 
         int round = 1;
         int maxRounds = 10;

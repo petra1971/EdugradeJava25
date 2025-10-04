@@ -1,7 +1,6 @@
 package org.game.entities;
 
 public class Weapon {
-
     private String name;
     private int damage;
 
