@@ -6,30 +6,25 @@ public class SafePlace {
     private String name;
     private int carrotReward;
     private int xpReward;
+    private Hero hero;
 
-    public SafePlace() {
-
-    }
-    public SafePlace(String name, int carrotReward, int xpReward) {
+    public SafePlace(String name, int xpReward, int carrotReward) {
         this.name = name;
-        this.carrotReward = carrotReward;
         this.xpReward = xpReward;
+        this.carrotReward = carrotReward;
     }
 
     public void visitSafePlace(Hero hero) {
-        if (hero.isAlive()) {
-            //Hero is alive
-            //TODO: fix random xpReward and carrotReward
-            xpReward = Helper.randomInt(10);
-            carrotReward = Helper.randomInt(5);
 
-            hero.gainXp(xpReward);
-            hero.gainCarrots(carrotReward);
-//            hero.levelUp(healthReward());
-            System.out.println("You were lucky that found a " + name + " with " + carrotReward + " carrots.");
-            System.out.println("Well deserved! Your XP level increase with " + xpReward + ".");
-            hero.status();
-        }
+        //TODO: fix random xpReward and carrotReward
+//            xpReward = Helper.randomInt(10);
+//            carrotReward = Helper.randomInt(5);
+
+        hero.gainXp(xpReward);
+        hero.gainCarrots(carrotReward);
+        System.out.println("You were lucky that found a " + name + " with " + carrotReward + " carrots,");
+        System.out.println("You read a very clever book while eating all carrots and got " + xpReward + " XP in reward.");
+        hero.status();
     }
 }
 

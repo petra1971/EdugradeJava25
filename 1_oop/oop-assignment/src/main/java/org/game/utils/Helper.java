@@ -2,13 +2,15 @@ package org.game.utils;
 
 public class Helper {
 
-    public static int randomInt(int multiplicator) {
-        //Math.random generates a somewhat random double between 0.0 and 1.0
-        return (int) Math.round(Math.random() * multiplicator);
+    //Math.random generates a somewhat random double between 0.0 and 1.0
+    public static int randomInt(double multiplicator) {
+//        System.out.println(String.valueOf(Math.random() ));
+//        System.out.println(String.valueOf(Math.round(Math.random() * multiplicator)));
+        return (int)Math.round(multiplicator * Math.random());
     }
 
     public static double random() {
-        return Math.round(Math.random());
+        return Math.random();
     }
 
     public static void sleepForMilliseconds(int time) {

@@ -11,16 +11,14 @@ public class Fight {
     public Fight (Hero hero, Enemy enemy) {
         this.hero = hero;
         this.enemy = enemy;
-
+    }
+    public boolean startFight() {
         int round = 1;
         int maxRounds = 10;
-
-        System.out.println("Fight begins! ");
-        hero.status();
-        System.out.println();
-        Helper.sleepForMilliseconds(4000);
+        Helper helper = new Helper();
 
         while (hero.isAlive() && enemy.isAlive()) {
+            System.out.println();
             System.out.println("Round " + round);
 
             //Hero attacks
@@ -34,27 +32,30 @@ public class Fight {
                 int enemyDamage = enemy.attack();
                 //And hero take damage
                 hero.takeDamage(enemyDamage);
-                System.out.println();
+                System.out.println("---------------");
             }
             round++;
-            Helper.sleepForMilliseconds(3000);
-            if (round >= maxRounds) {
-                System.out.println("Fight is over, both got exhausted and no one won this time");
+            if (round > maxRounds) {
+                System.out.println("The " + enemy.getName() + " gave up");
                 break;
             }
+            Helper.sleepForMilliseconds(1000);
         }
         //Who won?
         if (hero.isAlive()) {
             //Hero is alive
             hero.gainXp(enemy.getXpReward());
             hero.gainCarrots(enemy.getCarrotReward());
-//            hero.levelUp(enemy.getHealthReward());
-            System.out.println("Congratulations! You won the fight! " + hero.getName() +" gained " + enemy.getXpReward()
-                    + " XP and " + enemy.getCarrotReward() + " carrots.");
+            System.out.println("Congratulations! " + hero.getName() + " won the fight! and got " + enemy.getXpReward()
+                    + " XP and " + enemy.getCarrotReward() + " carrots in reward.");
             hero.status();
 
+        } else if (enemy.isAlive()) {
+            System.out.println("Game over! " + hero.getName() + " died.");
+
         } else {
-            System.out.println("Fight is over! " + hero.getName() + " died.");
+            System.out.println("Something went wrong");
         }
+        return hero.isAlive();
     }
 }

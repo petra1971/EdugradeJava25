@@ -11,7 +11,7 @@ public class Dog extends Enemy {
     //Concrete methods
     @Override
     public int attack() {
-        int damage = Helper.randomInt(30);
+        int damage = Helper.randomInt(20);
         System.out.println(this.getName() + " attacks with damage " + damage);
         return damage;
     }
