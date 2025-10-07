@@ -7,19 +7,20 @@ Character (abstract)
    | FarmerBoss
 
 # Main
-- [x] test weapon
 - [ ] Starta spelet och kör tills hjälten dör eller alt 3 väljs
+- boolean gameIsRunning
 
 # Abstrakta klasser
 Konstanter är i UPPER_CASE
-- [ ] Character
+- [x] Character
   - String name
   - int hp
   - int MAXHP
   - int damage?
-  - isALive
+  - isALive?()
   - abstract attack()
   - abstract takeDamage()
+  
 - [ ] Enemy extends Character
   - int xpReward
   - int carrotReward
