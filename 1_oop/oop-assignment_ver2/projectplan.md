@@ -7,7 +7,7 @@ Character (abstract)
    | FarmerBoss
 
 # Main
-- [ ] tester
+- [x] test weapon
 - [ ] Starta spelet och kör tills hjälten dör eller alt 3 väljs
 
 # Abstrakta klasser
