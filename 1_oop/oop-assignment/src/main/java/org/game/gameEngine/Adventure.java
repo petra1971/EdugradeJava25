@@ -25,7 +25,7 @@ public class Adventure {
 //        System.out.println("Random value " + randomiseAdventure);
 
         //Fight with Dog
-        if (randomiseAdventure < 0.5) {
+        if (randomiseAdventure < 0.35) {
             System.out.println("Oh no! You meet a furious dog on the backyard of the farm!!");
             System.out.println("Let's see who win this fight");
             System.out.println();
@@ -45,7 +45,6 @@ public class Adventure {
         } else {
             safePlace.visitSafePlace(hero);
         }
-
         return heroIsAlive;
     }
 }

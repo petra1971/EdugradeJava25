@@ -38,7 +38,7 @@ public class InputReader {
     }
 
     //Method to read a char incl error handling
-    public char readYesOrNo() {
+    public char readYesOrNo(String prompt) {
         char character;
         String input = scanner.next();
 

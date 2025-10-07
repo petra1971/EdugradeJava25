@@ -4,9 +4,7 @@ public class Helper {
 
     //Math.random generates a somewhat random double between 0.0 and 1.0
     public static int randomInt(double multiplicator) {
-//        System.out.println(String.valueOf(Math.random() ));
-//        System.out.println(String.valueOf(Math.round(Math.random() * multiplicator)));
-        return (int)Math.round(multiplicator * Math.random());
+        return (int)(multiplicator * Math.random()) +5;
     }
 
     public static double random() {

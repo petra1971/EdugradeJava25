@@ -54,9 +54,8 @@ public class MenuSystem {
             case 1:
                 System.out.println("You selected 1. Go on adventure");
                 System.out.println();
-                if (!adventure.startAdventure()) {
+                if (!adventure.startAdventure())
                     quitGame();
-                };
                 break;
             case 2:
                 System.out.println("You selected 2. Info");
