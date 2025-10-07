@@ -16,8 +16,8 @@ Konstanter är i UPPER_CASE
   - String name
   - int hp
   - int MAXHP
-  - int damage?
-  - isALive?()
+  - int damage
+  - isALive()
   - abstract attack()
   - abstract takeDamage()
   
@@ -35,12 +35,12 @@ Konstanter är i UPPER_CASE
   - String name
   - int damage
 
-- [ ] Hero extends Character
+- [x] Hero extends Character
   - int xp
   - int MAX_XP
   - int level
   - int MAX_LEVEL
-  - int weapon
+  - Weapon weapon
     - Konkreta
       - implementera attack() -> damage, alltid samma?
       - gainXP (vid 100 -> levelUp, xp = xp-100)

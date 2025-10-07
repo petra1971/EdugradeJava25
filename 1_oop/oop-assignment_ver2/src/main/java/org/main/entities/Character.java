@@ -3,20 +3,19 @@ package org.main.entities;
 public abstract class Character {
     protected String name;
     protected int hp;
-    protected int MAXHP;
+    protected int maxHp;
     protected int damage;
 
-    public Character(String name, int hp, int MAXHP, int damage) {
+    public Character(String name, int maxHp, int damage) {
         this.name = name;
-        this.hp = hp;
-        this.MAXHP = MAXHP;
+        this.hp = maxHp; //is max at the beginning
+        this.maxHp = maxHp;
         this.damage = damage;
     }
 
     //Abstract methods
     abstract int attack();    //Attack cause damage -> lower health for the attacked
-    abstract int takeDamage();
-    //    abstract void takeDamage(int damage);
+    abstract void takeDamage(int damage);
 
     //Concrete methods
     public boolean isAlive() {
