@@ -5,6 +5,7 @@ Character (abstract)
  | Enemy (abstract)
    | Dog
    | FarmerBoss
+
 # Main
 - [ ] tester
 - [ ] Starta spelet och kör tills hjälten dör eller alt 3 väljs
@@ -30,6 +31,9 @@ Konkreta klasser implementerar alla abstrakta metoder
 # Konkreta klasser
 Konstanter är i UPPER_CASE
 - [ ] Weapon
+  - String name
+  - int damage
+
 - [ ] Hero extends Character
   - int xp
   - int MAX_XP
