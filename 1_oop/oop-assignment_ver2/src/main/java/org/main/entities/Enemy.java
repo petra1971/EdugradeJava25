@@ -5,10 +5,10 @@ public abstract class Enemy extends Character{
     protected int xpReward;
     protected int carrotReward;
 
-    public Enemy(String name, int maxHp, int damage) {
-        super(name, maxHp, damage);
+    public Enemy(String name, int maxHp) {
+        super(name, maxHp);
     }
-
+    //Kunde implementerats redan i Enemy men pga kraven i inlämningsuppgiften behövde den göras abstract redan i Character-klassen
     abstract int attack();
 
     @Override

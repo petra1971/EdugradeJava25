@@ -6,11 +6,10 @@ public abstract class Character {
     protected int maxHp;
     protected int damage;
 
-    public Character(String name, int maxHp, int damage) {
+    public Character(String name, int maxHp) {
         this.name = name;
         this.hp = maxHp; //is max at the beginning
         this.maxHp = maxHp;
-        this.damage = damage;
     }
 
     //Abstract methods
@@ -20,5 +19,9 @@ public abstract class Character {
     //Concrete methods
     public boolean isAlive() {
         return (hp > 0);
+    }
+
+    public String getName() {
+        return name;
     }
 }

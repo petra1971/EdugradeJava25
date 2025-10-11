@@ -1,6 +1,7 @@
 package org.main;
 
 import org.main.entities.Dog;
+import org.main.entities.Farmer;
 import org.main.entities.Hero;
 import org.main.entities.Weapon;
 
@@ -12,6 +13,8 @@ public class Main {
 //        testWeapon();
 //        testHero();
         testDog();
+        System.out.println("-------------------");
+        testFarmer();
     }
 
     // Test Weapon class
@@ -22,8 +25,8 @@ public class Main {
 
     //Test Hero class
     static void testHero() {
-        Hero hero = new Hero("KillerRabbit", 10);
-        System.out.println("Hero is alive: " + hero.isAlive());
+        Hero hero = new Hero("KillerRabbit");
+        System.out.println(hero.getName() +" is alive: " + hero.isAlive());
         hero.attack();
         hero.takeDamage(90);
         hero.gainXp(100);
@@ -34,7 +37,7 @@ public class Main {
 
     //Test Dog class
     static void testDog() {
-        Dog dog = new Dog("Rufus", 100, 25);
+        Dog dog = new Dog("Rufus", 100);
         dog.isAlive();
         System.out.println(dog.getName() + " is dog name");
 
@@ -45,5 +48,17 @@ public class Main {
         System.out.println("Medium damage = " + sumDamage / 100);
 
         dog.takeDamage(20);
+    }
+
+    //Test Farmer
+    static void testFarmer() {
+        Farmer farmer = new Farmer("Insane Farmer", 100);
+        int sumDamage = 0;
+        for (int i = 1; i <= 100; i++) {
+            sumDamage += farmer.attack();
+        }
+        System.out.println("Medium damage = " + sumDamage / 100);
+
+        farmer.takeDamage(20);
     }
 }

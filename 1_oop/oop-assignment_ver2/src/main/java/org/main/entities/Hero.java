@@ -8,13 +8,14 @@ public class Hero extends Character {
     private final int MAX_LEVEL;
     private Weapon weapon;
 
-    public Hero(String name, int damage) {
-        super(name, 100, damage);
+    public Hero(String name) {
+        super(name, 100);
         this.xp = 0;
         this.MAX_XP = 100;
         this.carrots = 0;
         this.level = 1;
         this.MAX_LEVEL = 10;
+        this.damage = 20;
     }
 
     @Override

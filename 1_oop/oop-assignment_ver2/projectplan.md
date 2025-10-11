@@ -44,17 +44,17 @@ Konstanter är i UPPER_CASE
     - Konkreta
       - implementera attack() -> damage, alltid samma
       - gainXP (vid 100 -> levelUp, xp = xp-100)
-      - implementera takeDamage() -> HP minskar, min = 0
       - levelUp()
       - status()
-- [ ] FuriousDog extends Enemy
+      - 
+- [x] FuriousDog extends Enemy
     - implementera attack() -> random damage
-    - implementera takeDamage() -> HP minskar, min = 0
-- [ ] InsaneFarmer(Boss)
+  
+- [x] InsaneFarmer(Boss)
   - implementera attack() -> random damage. Börja med enkla värden
-  - implementera takeDamage() -> HP minskar, min = 0
   - specialAttack -> random doubleDamage 30% chans
   - tydlig info om dubbelDamage aktiveras
+  
 - [ ] Secure place?
   - får xp och morötter
 -----------------------
