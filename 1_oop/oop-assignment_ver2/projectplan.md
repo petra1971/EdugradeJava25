@@ -63,6 +63,7 @@ Konstanter är i UPPER_CASE
   - 1. Testa strid
   - 2. Avsluta
 
+//NÄSTA ATT GÖRA ÄR DETTA
 - [ ] Enkel Fight
 - Skapa Hero
 - Skapa Enemy
@@ -77,6 +78,7 @@ Konstanter är i UPPER_CASE
   - Testa att köra 10 rundor
   
 - [ ] Visa spelarinfo
+
 - [ ] Fullständig meny
   - 1. Adventure
   - 2. Player Info
@@ -91,41 +93,5 @@ Konstanter är i UPPER_CASE
 - [ ] Inläsning av integer med felhantering (kan bara välja alternativen i menyn)
 - [ ] Inlösning av specifika tecken, t ex Y, N
   ## Annat
-- [ ]  randomInt()
-- [ ]  sleepForMilliSeconds()
-
-# MD-STRUKTUR
-### Titel 3
-
-Brödtext: Kod från letionerna
-
-_Kursiv text med tailing whitespace_  
-*Kursiv text*
-
-__Fet text med tailing dvs 2 whilespace__  
-**Fet text**
-
-- lista
-- lista
-- lista
-
----
-
-* lista
-* lista
-* lista
-
----
-
-1. list
-    * lista
-    * lista
-2. list
-3. list
-
-Shift+tab för att ångra tab
-
-Checklista
-- [ ] lista
-- [ ] lista
-- [ ] lista
+- [x]  randomInt()
+- [x]  sleepForMilliSeconds()
