@@ -43,5 +43,7 @@ public class Main {
             sumDamage += dog.attack();
         }
         System.out.println("Medium damage = " + sumDamage / 100);
+
+        dog.takeDamage(20);
     }
 }

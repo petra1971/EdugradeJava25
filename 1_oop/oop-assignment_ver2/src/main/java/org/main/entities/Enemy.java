@@ -12,11 +12,12 @@ public abstract class Enemy extends Character{
     abstract int attack();
 
     @Override
-    void takeDamage(int damage) {
+   public void takeDamage(int damage) {
         hp -= damage;
         if (!isAlive()) {
             System.out.println(name + " took damage and died!");
-        }
+        } else
+            System.out.println(name + " took " + damage + " damage. Hp is now " + hp);
     }
 
 
