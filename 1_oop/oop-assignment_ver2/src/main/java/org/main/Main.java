@@ -20,7 +20,7 @@ public class Main {
 
     //Test Hero class
     static void testHero() {
-        Hero hero = new Hero("KillerRabbit", 100, 10);
+        Hero hero = new Hero("KillerRabbit",10);
         System.out.println("Hero is alive: " + hero.isAlive());
         hero.attack();
         hero.takeDamage(90);

@@ -2,13 +2,13 @@ package org.main.entities;
 
 public class Hero extends Character {
     private int xp;
-    private int MAX_XP;
+    private final int MAX_XP;
     private int carrots;
     private int level;
     private final int MAX_LEVEL;
     private Weapon weapon;
 
-    public Hero(String name, int maxHp, int damage) {
+    public Hero(String name, int damage) {
         super(name, 100, damage);
         this.xp = 0;
         this.MAX_XP = 100;
@@ -36,29 +36,35 @@ public class Hero extends Character {
     }
 
     public void gainXp(int xpReward) {
-        this.xp += xpReward;
+        xp += xpReward;
         System.out.println("xp incl reward: "+  xp);
         if (xp >= maxHp) {
             levelUp();
         }
-        this.hp = maxHp;
+        hp = maxHp;
         System.out.println("hp=maxHP: " + hp);
         //TODO: fix so HP and XP get correct "KillerRabbit status: Level = 2, HP = 100/110,XP: -100/0, carrots: 0
     }
 
     public void levelUp() {
         System.out.println("Before level up, level is " + level);
+        System.out.println("XP before level up is: " + xp);
         if (level <= MAX_LEVEL) {
             level++;
+            xp = xp - MAX_XP;
             System.out.println("Level after is " + level);
-            if ((xp = xp - MAX_XP) < 0) {
-                xp = 0;
-            }
+//            if ((xp = xp - MAX_XP) < 0) {
+//                xp = 0;
+//            }
             System.out.println("xp after level up is " + xp);
             maxHp += 10;
         } else {
             System.out.println("YOU REACHED LEVEL 10 AND WON THE GAME");
         }
+    }
+
+    public void gainWeapon(Weapon weapon) {
+        this.weapon = weapon;
     }
 
     public void status(){
@@ -84,10 +90,6 @@ public class Hero extends Character {
 
     public Weapon getWeapon() {
         return weapon;
-    }
-
-    public void setWeapon(Weapon weapon) {
-        this.weapon = weapon;
     }
 }
 

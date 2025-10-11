@@ -42,7 +42,7 @@ Konstanter är i UPPER_CASE
   - int MAX_LEVEL
   - Weapon weapon
     - Konkreta
-      - implementera attack() -> damage, alltid samma?
+      - implementera attack() -> damage, alltid samma
       - gainXP (vid 100 -> levelUp, xp = xp-100)
       - implementera takeDamage() -> HP minskar, min = 0
       - levelUp()
@@ -88,7 +88,7 @@ Konstanter är i UPPER_CASE
 # Hjälpmetoder
   ## Inläsning
 - [ ] Inlösning av text med felhantering
-- [ ] Inläsning av integer med felhantering (kan bara välja alterntiven i menyn)
+- [ ] Inläsning av integer med felhantering (kan bara välja alternativen i menyn)
 - [ ] Inlösning av specifika tecken, t ex Y, N
   ## Annat
 - [ ]  randomInt()
