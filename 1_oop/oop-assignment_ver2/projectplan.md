@@ -21,7 +21,7 @@ Konstanter är i UPPER_CASE
   - abstract attack()
   - abstract takeDamage()
   
-- [ ] Enemy extends Character
+- [x] Enemy extends Character
   - int xpReward
   - int carrotReward
 
