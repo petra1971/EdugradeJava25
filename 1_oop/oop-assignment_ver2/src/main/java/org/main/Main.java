@@ -11,20 +11,18 @@ public class Main {
 
 //        testWeapon();
 //        testHero();
-        for (int i = 1; i < 10; i++) {
-            testDog();
-        }
+        testDog();
     }
 
     // Test Weapon class
-    static void testWeapon () {
+    static void testWeapon() {
         Weapon weapon = new Weapon("Gun", 10);
         System.out.println("Name: " + weapon.getName() + ", damage= " + weapon.getDamage());
     }
 
     //Test Hero class
     static void testHero() {
-        Hero hero = new Hero("KillerRabbit",10);
+        Hero hero = new Hero("KillerRabbit", 10);
         System.out.println("Hero is alive: " + hero.isAlive());
         hero.attack();
         hero.takeDamage(90);
@@ -39,6 +37,11 @@ public class Main {
         Dog dog = new Dog("Rufus", 100, 25);
         dog.isAlive();
         System.out.println(dog.getName() + " is dog name");
-        dog.attack();
+
+        int sumDamage = 0;
+        for (int i = 1; i <= 100; i++) {
+            sumDamage += dog.attack();
+        }
+        System.out.println("Medium damage = " + sumDamage / 100);
     }
 }
