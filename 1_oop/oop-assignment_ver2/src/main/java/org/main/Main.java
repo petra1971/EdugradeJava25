@@ -1,5 +1,6 @@
 package org.main;
 
+import org.main.entities.Dog;
 import org.main.entities.Hero;
 import org.main.entities.Weapon;
 
@@ -8,8 +9,11 @@ import org.main.entities.Weapon;
 public class Main {
     public static void main(String[] args) {
 
-        testWeapon();
-        testHero();
+//        testWeapon();
+//        testHero();
+        for (int i = 1; i < 10; i++) {
+            testDog();
+        }
     }
 
     // Test Weapon class
@@ -28,5 +32,13 @@ public class Main {
         hero.status();
         hero.levelUp();
         hero.status();
+    }
+
+    //Test Dog class
+    static void testDog() {
+        Dog dog = new Dog("Rufus", 100, 25);
+        dog.isAlive();
+        System.out.println(dog.getName() + " is dog name");
+        dog.attack();
     }
 }
