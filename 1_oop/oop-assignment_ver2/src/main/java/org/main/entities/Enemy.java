@@ -18,4 +18,6 @@ public abstract class Enemy extends Character{
             System.out.println(name + " took damage and died!");
         }
     }
+
+
 }
